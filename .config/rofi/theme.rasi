@@ -1,0 +1,43 @@
+* {
+    height: 30px;
+    font: "Hack 10";
+    prompt-font: "Hack 10";
+    prompt-padding: 2px;
+    background-color: #202020;
+    border-color: #282c34;
+    text-color: #ffffff;
+    prompt-background: #202020;
+    prompt-foreground: #ffffff;
+    selected-normal-background: #21a7d0;
+    selected-normal-foreground: #ffffff;
+}
+#window {
+    anchor: north;
+    location: north;
+    width: 100%;
+    padding: 6px;
+    children: [ horibox ];
+}
+#horibox {
+    orientation: horizontal;
+    children: [ prompt, entry, listview ];
+}
+#prompt {
+    padding: @prompt-padding;
+    font: @prompt-font;
+    background-color: @prompt-background;
+    text-color: @prompt-foreground;
+}
+#listview {
+    layout: horizontal;
+    lines: 100;
+}
+#entry {
+    padding: 2px;
+    expand: false;
+    width: 10em;
+}
+#element selected {
+    background-color: @selected-normal-background;
+    text-color: @selected-normal-foreground;
+}

@@ -1,0 +1,8 @@
+configuration {
+    modi: "window,drun,run";
+    theme: "~/.config/rofi/theme.rasi";
+    disable-history: true;
+    hide-scrollbar: true;
+    display-drun: "Run: ";
+    drun-display-format: "{name} ";
+}
