@@ -3,28 +3,40 @@ let mapleader = " "
 nnoremap <Leader>o :vs 
 " Toggle line wrapping
 nnoremap <Leader>t :call ToggleWrap()<CR>
+" Call Tabularize and take single character parameter
+xnoremap <Leader>b :call Tabular()<CR>
 " Remap beginning/end of line keys
 nnoremap <Leader>a ^
 nnoremap <Leader>e $
 " Open vifm and open in split
-nnoremap <Leader>vv :Vifm<CR>
+nnoremap <Leader>vo :Vifm<CR>
 nnoremap <Leader>vs :VsplitVifm<CR>
+" Run shellcheck on current file
+map <Leader>s :!clear && shellcheck %<CR>
 " Remap save and exit
 nnoremap <Leader>w :w<CR>
 nnoremap <Leader>q :wq<CR>
-" Remap arrow keys and better escape
+" Demap arrow keys and scroll
 nnoremap <Up> <nop>
 nnoremap <Down> <nop>
 nnoremap <Left> <nop>
 nnoremap <Right> <nop>
+inoremap <Up> <nop>
+inoremap <Down> <nop>
+inoremap <Left> <nop>
+inoremap <Right> <nop>
+" Control + hjkl in Insert Mode
+inoremap <C-k> <up>
+inoremap <C-j> <down>
+inoremap <C-h> <left>
+inoremap <C-l> <right>
+" Better Escape
 inoremap jf <Esc>
 
 " gcc comments a line
-" gc comments a highlighted section
-" space+c comments a paragraph
+" space+c comments a paragraph or highlighted section
 nmap <Leader>c gcap
-
-nnoremap <C-p> :Files<CR>
+vmap <Leader>c gc
 
 " Tabs
 set tabstop=4 softtabstop=4
@@ -33,11 +45,11 @@ set expandtab
 set smartindent
 set autoindent
 
-syntax enable " syntax highlighting
-set number " line numbers
+syntax enable   " syntax highlighting
+set number      " line numbers
 set scrolloff=8 " scroll offset
-set incsearch " search as you type
-set nowrap " default wrapping off
+set incsearch   " search as you type
+set nowrap      " default wrapping off
 
 set nocompatible
 filetype indent on
@@ -53,6 +65,7 @@ Plugin 'vifm/vifm.vim'
 Plugin 'ap/vim-css-color'
 Plugin 'tpope/vim-commentary'
 Plugin 'Raimondi/delimitMate'
+Plugin 'godlygeek/tabular'
 call vundle#end()
 
 " Setup Lightline
@@ -71,9 +84,15 @@ set splitright
 
 " Toggle Line Wrapping
 function ToggleWrap()
-        if (&wrap == 1)
-                set nowrap
-        else
-                set wrap
-        endif
+    if (&wrap == 1)
+        set nowrap
+    else
+        set wrap
+    endif
+endfunction
+
+" Call difficult-to-type-ass Tabularize and take delimiter input
+function Tabular() range
+     let c = getchar()
+     execute ':Tabularize /' . nr2char(c)
 endfunction
