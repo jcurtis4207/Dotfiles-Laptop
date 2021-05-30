@@ -8,7 +8,7 @@
 show_thumbnail=1
 
 [Window]
-width=672
+width=1352
 height=724
 maximized=0
 
@@ -142,6 +142,8 @@ task_err_cont-b=2
 task_q_new-b=1
 task_q_smart-b=1
 context_dlg-s=Monospace 11
+context_dlg-x=800
+context_dlg-y=600
 date_format-s=%Y-%m-%d %H:%M
 open_hand-s=hand_f_+iso
 open_all-key=65475
@@ -380,7 +382,7 @@ cstm_68ffbc59-parent=panel1_tool_r
 panel_sliders-s=240
 panel_sliders-x=588
 panel_sliders-y=320
-panel_sliders-z=842
+panel_sliders-z=524
 cstm_3aabc14a-label=New _Command
 cstm_3aabc14a-parent=main_tool
 cstm_3aabc14a-task=1
@@ -515,5 +517,10 @@ file_dlg-y=902
 cstm_4b8e0b78-x=3
 cstm_4b8e0b78-z=/media/Windows_Boot
 cstm_4b8e0b78-label=Windows_Boot
+cstm_4b8e0b78-next=cstm_4c6dbb4a
 cstm_4b8e0b78-prev=cstm_26c732cb
+cstm_4c6dbb4a-x=3
+cstm_4c6dbb4a-z=/media
+cstm_4c6dbb4a-label=media
+cstm_4c6dbb4a-prev=cstm_4b8e0b78
 

@@ -11,6 +11,7 @@
 local awful = require("awful")
 local wibox = require("wibox")
 local naughty = require("naughty")
+local shape = require("gears.shape")
 
 local script_path = os.getenv("HOME") .. "/Scripts/"
 
@@ -26,7 +27,7 @@ local margin_top = 7
 local wifi_widget = wibox.widget {
     image = icons_path .. "network-wireless-connected-symbolic.svg",
     resize = false,
-    widget = wibox.widget.imagebox
+    widget = wibox.widget.imagebox,
 }
 
 -- Popup with connected network when left clicked

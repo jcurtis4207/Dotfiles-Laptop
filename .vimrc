@@ -1,21 +1,32 @@
 let mapleader = " "
-" Open file in new split
-nnoremap <Leader>o :vs 
-" Toggle line wrapping
-nnoremap <Leader>t :call ToggleWrap()<CR>
+" Beginning of line
+nnoremap <Leader>a ^
 " Call Tabularize and take single character parameter
 xnoremap <Leader>b :call Tabular()<CR>
-" Remap beginning/end of line keys
-nnoremap <Leader>a ^
+" End of line
 nnoremap <Leader>e $
+" Display vimrc bindings
+nnoremap <Leader>k :! less ~/.vimrc<CR>
+" Open file in new split
+nnoremap <Leader>o :vs 
+" Save and exit
+nnoremap <Leader>q :wq<CR>
+" Run shellcheck on current file
+map <Leader>s :!clear && shellcheck %<CR>
+" Toggle line wrapping
+nnoremap <Leader>t :call ToggleWrap()<CR>
 " Open vifm and open in split
 nnoremap <Leader>vo :Vifm<CR>
 nnoremap <Leader>vs :VsplitVifm<CR>
-" Run shellcheck on current file
-map <Leader>s :!clear && shellcheck %<CR>
-" Remap save and exit
+" Save
 nnoremap <Leader>w :w<CR>
-nnoremap <Leader>q :wq<CR>
+" Better Escape
+inoremap jf <Esc>
+" Control + hjkl in Insert Mode
+inoremap <C-k> <up>
+inoremap <C-j> <down>
+inoremap <C-h> <left>
+inoremap <C-l> <right>
 " Demap arrow keys and scroll
 nnoremap <Up> <nop>
 nnoremap <Down> <nop>
@@ -25,13 +36,6 @@ inoremap <Up> <nop>
 inoremap <Down> <nop>
 inoremap <Left> <nop>
 inoremap <Right> <nop>
-" Control + hjkl in Insert Mode
-inoremap <C-k> <up>
-inoremap <C-j> <down>
-inoremap <C-h> <left>
-inoremap <C-l> <right>
-" Better Escape
-inoremap jf <Esc>
 
 " gcc comments a line
 " space+c comments a paragraph or highlighted section
