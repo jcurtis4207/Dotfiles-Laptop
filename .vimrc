@@ -68,9 +68,15 @@ Plugin 'itchyny/lightline.vim'
 Plugin 'vifm/vifm.vim'
 Plugin 'ap/vim-css-color'
 Plugin 'tpope/vim-commentary'
-Plugin 'Raimondi/delimitMate'
 Plugin 'godlygeek/tabular'
+Plugin 'junegunn/rainbow_parentheses.vim'
 call vundle#end()
+
+" Setup Rainbow
+let g:rainbow#max_level = 16
+let g:rainbow#blacklist = ['SlateBlue']
+let g:rainbow#pairs = [['(', ')'], ['[', ']'], ['{', '}']]
+autocmd VimEnter * RainbowParentheses
 
 " Setup Lightline
 set laststatus=2
