@@ -50,7 +50,8 @@ set smartindent
 set autoindent
 
 syntax enable   " syntax highlighting
-set number      " line numbers
+"set number      " line numbers
+set number relativenumber " relative numbers
 set scrolloff=8 " scroll offset
 set incsearch   " search as you type
 set nowrap      " default wrapping off

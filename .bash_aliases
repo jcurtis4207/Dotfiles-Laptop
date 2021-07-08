@@ -29,7 +29,7 @@ alias scripts="/usr/bin/git --git-dir=/home/$user/Git/Scripts --work-tree=/home/
 
 function update {
     if [ $distro = ARCH ];then
-            sudo pacman -Syu
+            sudo pacman -Syy
     elif [ $distro = DEBIAN ];then
             sudo apt-get update
     else
@@ -37,7 +37,9 @@ function update {
     fi
 }
 function upgrade {
-    if [ $distro = DEBIAN ];then
+    if [ $distro = ARCH ];then
+            sudo pacman -Syu; echo "paru -Sua for AUR packages"
+    elif [ $distro = DEBIAN ];then
             sudo apt-get dist-upgrade --yes --auto-remove
     else
             echo "Distro Not Recognized"
