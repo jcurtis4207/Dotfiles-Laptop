@@ -11,20 +11,14 @@ alias ls="ls -hlN --color=auto --group-directories-first" # human-readable, list
 alias la="ls -hNA --color=auto" # human-readable, no quotes, list all but '.' and '..'
 alias ps="ps aux" # all user processes, show user/owner, all processes not run by terminal
 alias du="du -h -d 1" # human readable and 1 directory deep
-alias sudovim="sudo -E vim" # run vim as sudo with user settings and plugins
 alias mkdir="mkdir -p" # create parents as needed
+alias sudovim="sudo -E vim" # run vim as sudo with user settings and plugins
 alias shutdown="sudo shutdown -h now"
 alias snip="scrot -s /home/$user/Pictures/%Y-%m-%d_%H:%M:%S_scrot.png" # select window, move to Pictures
 
 # git bare repositories
 alias dotfiles="/usr/bin/git --git-dir=/home/$user/Git/Dotfiles-Laptop --work-tree=/home/$user"
 alias scripts="/usr/bin/git --git-dir=/home/$user/Git/Scripts --work-tree=/home/$user"
-
-# make directory and enter it
-function mkcd {
-    mkdir -p $1
-    cd $1
-}
 
 # package management
 function update {

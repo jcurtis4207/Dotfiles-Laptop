@@ -8,7 +8,7 @@
 show_thumbnail=1
 
 [Window]
-width=1352
+width=672
 height=724
 maximized=0
 
@@ -119,7 +119,7 @@ task_col_avgspeed-x=11
 task_col_avgspeed-y=60
 task_col_avgest-x=12
 task_col_avgest-y=65
-task_show_manager-x=200
+task_show_manager-x=179
 task_show_manager-b=2
 task_hide_manager-b=1
 task_popups-s=600
@@ -382,7 +382,7 @@ cstm_68ffbc59-parent=panel1_tool_r
 panel_sliders-s=240
 panel_sliders-x=588
 panel_sliders-y=320
-panel_sliders-z=524
+panel_sliders-z=179
 cstm_3aabc14a-label=New _Command
 cstm_3aabc14a-parent=main_tool
 cstm_3aabc14a-task=1
