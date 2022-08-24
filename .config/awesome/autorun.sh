@@ -8,9 +8,10 @@ function run {
 }
 
 # setup touchpad
-xinput set-prop 13 313 1     #tapping
-xinput set-prop 13 326 0 1 0 #side scrolling
-xinput set-prop 13 328 0.2   #acceleration
+# xinput list-props 13
+xinput set-prop 13 307 1     # Tapping Enabled
+xinput set-prop 13 320 0 1 0 # Scroll Method Enabled
+xinput set-prop 13 322 0.2   # Accel Speed
 # start programs
 run mullvad-vpn
 run picom -b

@@ -68,8 +68,8 @@ bindings.keyboard = {
 				  {description = "swap with client to the bottom", group = "client"}),
 
 		-- Screen manipulation
-		--awful.key({}, "Pause", function () awful.client.movetoscreen() end,
-		--		  {description = "move client to next screen", group = "client"}),
+		awful.key({}, "Pause", function () awful.client.movetoscreen() end,
+				  {description = "move client to next screen", group = "client"}),
 
 		-- Standard program
 		awful.key({ modkey, "Control" }, "r", awesome.restart,
@@ -92,7 +92,7 @@ bindings.keyboard = {
 
 	-- LAUNCHERS
 		-- Terminal
-		awful.key({ modkey }, "Return", function () awful.spawn(terminal) end,
+		awful.key({ modkey }, "Return", function () awful.spawn.easy_async("alacritty", function() return 0 end) end,
 				  {description = "open a terminal", group = "launcher"}),
 				  
 		-- SpaceFM
